@@ -17,18 +17,19 @@ class HelloWorld {
         
         int mili_time[] = new int[count_process];
         
+        System.out.println("Process\tBurst\tWaiting Time");
         for (int j=0; j<count_process; j++)
         {
             int mili = 0;
             if(j==0)
             {
-                System.out.println("P0 execution time: 0");
+                System.out.println("P0\t\t"+process_arr[0]+"\t\t0\n");
                 mili_time[0]=0;
             }
             else
             {
                 mili_time[j] = mili_time[j-1]+process_arr[j-1];
-                System.out.println("P"+j+" execution time:"+mili_time[j]);
+                System.out.println("P"+j+"\t\t"+process_arr[j]+"\t\t"+mili_time[j]+"\n");
             }
         }
         
