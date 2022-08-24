@@ -10,7 +10,7 @@ class HelloWorld {
         
         for (int i=0; i<count_process; i++)
         {
-            System.out.println("Enter Process: ");
+            System.out.println("Enter Process-time: ");
             int get_process = sc.nextInt();
             process_arr[i]=get_process;
         }
@@ -31,5 +31,15 @@ class HelloWorld {
                 System.out.println("P"+j+" execution time:"+mili_time[j]);
             }
         }
+        
+        int wait_time_sum = 0;
+        
+        for (int k2:mili_time)
+        {
+            wait_time_sum = wait_time_sum+k2;
+        }
+        
+        float avg_time = wait_time_sum/count_process;
+        System.out.println("Average waiting time is: "+avg_time);
     }
 }
