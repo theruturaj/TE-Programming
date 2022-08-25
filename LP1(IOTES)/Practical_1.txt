@@ -1,0 +1,100 @@
+1. Differentiate between Raspberry-pi, Beaglebone and Arduino.
+Raspberry-pi: It has a clock speed of 700Mhz with core ram of 256MB. The processor used is of ARM-11 architecture.
+Minimum power requirement is 700mA (3.5W) and input voltage required is 5V.
+It supports 2 USB 2.0 ports with HDMI or Composite port for video output and HDMI or Analog for audio output. It supports no Analog input ports.
+
+Arduino: It has a clock speed of 16Mhz with core ram of 2KB. The processor used is of ATMega 328 architecture.
+Minimum power requirement is of 42mA (0.3W) and input voltage required is 7to 12V.
+It supports no USB port, Video output port or Audio port. It has 6 10-bit  analog input ports.
+
+BeagleBone: It has a clock speed of 700Mhz with core ram of 256MB. The processor used is of ARM Cortex-A8 architecture.
+Minimum power requirement is 170mA (0.85W) and input voltage required is 5V.
+It supports 1 USB 2.0 ports with only Analog audio output port and not video ouput port.
+
+
+2. Enlist various features of different raspberry-pi.
+i. CPU
+ii. HDMI port
+iii. GPU
+iv. RAM
+v. Ethernet port
+vi. SD card slot
+vii. General purpose Input and Output pins (GPIO)
+viii. LEDs
+ix. USB port
+x. Power Source
+
+
+3. What are the features of beaglebone Ai and Raspberry-pi 400?
+Beaglebone AI: i. 1GB Ram and 16GB on-board eMMC flash.
+(eMMC is a small storage device made up of NAND flash memory)
+ii. USB type-C for power supply
+iii. Superspeed dual-role controller
+iv. USB type-A for host
+v. Gigabit Ethernet with 2.4/5 Ghz WiFi and Bluetooth
+vi. MicroHDMI
+vii. In-built Debian GNU/Linux
+
+Raspberry-pi 400: i. Quad-core Cortex-A72 @ 1.8Ghz
+ii. 4GB LPDDR4 @ 3200 Mhz (RAM)
+iii. Dual-band IEEE 802.11b/g/n/ac wireless LAN
+iv. Bluetooth 5.0
+v. Gigabit Ethernet
+vi. 2 x USB 3.0 and 1 x USB 2.0 ports
+vii. 40-pin GPIO header
+viii. 2 x micro HDMI ports
+ix. 5V DC via USB connector
+
+
+4. What key factors should be considered when choosing a microprocessor or micro-controller in particular application?
+i. Power efficiency
+ii. Temperature tolerance
+iii. Security
+iv. Hardware architecture
+v. Memory
+vi. Hardware interface
+vii. Software architecture
+viii. Cost
+
+
+5. List out different applications of Raspberry-pi, Beaglebone and Arduino.
+Raspberry-pi: i. Desktop PC
+ii. Wireless print server
+iii. Media usage
+iv. Game servers
+v. Retro gaming machine
+vi. Robot controller
+vii. Stop motion camera
+viii. Time-lapse camera
+ix. FM radio stations
+
+Beaglebone: i. Drones
+ii. Whac-a-mole game
+iii. Standalone pedometer
+iv. Luggage transporter robots
+v. Voice controlled devices
+
+Arduino: i. Weighing Machines
+ii. Traffic light count-down timer
+iii. Parking lot counter
+iv. Embedded systems
+v. Home automation
+vi. Industrial automation
+vii. Emergency lights for railways
+
+
+6. List different operating systems that can run on Raspberry-pi.
+i. Raspbian
+ii. Ubuntu MATE
+iii. DietPi
+iv. Arch Linux ARM
+v. FydeOS
+vi. Windows 10 ARM
+vii. OpenELEC
+viii. OSMC
+
+
+7. How to find your Raspberry-pi ip address in order to connect to it?
+Method 1: Open a terminal and type ‘ipconfig’. The IP address will be on the second line.
+
+Method 2: Hovering your mouse curosr over the network icon in the top-right corner, next to the clock.
