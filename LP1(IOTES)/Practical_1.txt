@@ -95,6 +95,6 @@ viii. OSMC
 
 
 7. How to find your Raspberry-pi ip address in order to connect to it?
-Method 1: Open a terminal and type ‘ipconfig’. The IP address will be on the second line.
+Method 1: Open a terminal and type ‘ifconfig’. The IP address will be on the second line.
 
 Method 2: Hovering your mouse curosr over the network icon in the top-right corner, next to the clock.
