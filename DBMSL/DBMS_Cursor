@@ -1,0 +1,47 @@
+CREATE TABLE Employee(E_ID number(20) unique, E_name varchar(20), E_age number(5), E_city varchar(10), E_salary number(10));
+
+INSERT INTO Employee values(1, 'Sam', 25, 'Pune', 12500);
+INSERT INTO Employee values(2, 'Ron', 35, 'Pune', 19500);
+INSERT INTO Employee values(3, 'Rahul', 29, 'Mumbai', 16000);
+INSERT INTO Employee values(4, 'Samuel', 31, 'Kolkata', 19750);
+INSERT INTO Employee values(5, 'Karen', 24, 'Kolkata', 11800);
+
+SELECT * FROM Employee order by E_ID ASC;
+
+-- Implicit Cursor
+
+DECLARE
+    total_rows number(2);
+    
+BEGIN
+    UPDATE Employee
+    SET E_salary = E_salary - 500;
+    IF sql%notfound THEN
+        dbms_output.put_line('No Employee Selected');
+    ELSIF sql%found THEN
+        total_rows := sql%rowcount;
+        dbms_output.put_line(total_rows || ' Employees Selected');
+    END IF;
+END;
+/
+
+-- Explicit Cursor
+
+DECLARE
+    emp_id Employee.e_id%type;
+    emp_name Employee.e_name%type;
+    emp_ct Employee.e_city%type;
+    
+    CURSOR e_employee is
+        SELECT E_id, E_name, E_city FROM Employee;
+        
+BEGIN
+    OPEN e_employee;
+    LOOP
+    FETCH e_employee into emp_id, emp_name, emp_ct;
+        EXIT WHEN e_employee%notfound;
+        dbms_output.put_line(emp_id || ' ' || emp_name || ' ' || emp_ct);
+    END LOOP;
+    CLOSE e_employee;
+END;
+/
