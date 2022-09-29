@@ -116,7 +116,3 @@ BEGIN
     END LOOP;
     CLOSE give_sal;
 END;
-
-
-
-gajanan.aochar@mescoepune.org
