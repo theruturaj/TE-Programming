@@ -1,0 +1,33 @@
+declare 
+cursor cu1 is 
+select Roll,Name from Student; 
+cursor cu2 is 
+select Roll from CompDep; 
+rno int; 
+nm varchar(20); 
+rno2 int; 
+begin 
+open cu1; 
+open cu2; 
+loop 
+fetch cu1 into rno,nm; 
+fetch cu2 into rno2; 
+exit when cu1%found = false; 
+if rno2 <> rno then 
+insert into CompDep values(rno,nm); 
+end if; 
+end loop; 
+close cu1; 
+close cu2; 
+end; 
+/ 
+create table CompDep(Roll int,Name varchar(20));
+create table Student(Roll int,Name varchar(20)); 
+insert into Student values(1,'a');
+insert into Student values(2,'b');
+insert into Student values(3,'c');
+insert into Student values(4,'d'); 
+insert into CompDep values(2,'b'); 
+insert into CompDep values(5,'e');
+insert into CompDep values(6,'f');
+select * from CompDep
