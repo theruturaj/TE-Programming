@@ -1,21 +1,25 @@
-create database library;
-use library;
-create table library(book_id int primary key, title varchar(20), author varchar(20), edition int, 
-no_of_copies int);
-desc library;
-create table library_audit(book_id int, title varchar(20), author varchar(20), edition int,no_of_copy 
-int, date_of_mod date, type_of_operation varchar(30), user_of_operation varchar(30));
-desc library_audit;
-create table transaction(trans_id int, book_id int, issue_return varchar(10), no_of_copy int);
-desc transaction;
-insert into library values(1,"TOC","vvRichard",4,5);
-insert into library values(2,"CN","Foruzan",2,6);
-insert into library values(3,"ISEE","Rahul De",6,10);
-insert into library values(4,"DBMS","Silberchatz",6,8);
-insert into library values(5,"SEPM","Pressman",7,4);
-insert into library values(6,"DS","Horitzsahani",9,6);
-insert into library values(7,"Java","Powell",8,7);
-insert into library values(8,"Learning Scala","Swartz",7,4);
-insert into library values(9,"Cpp","Bjarne",7,2);
-insert into library values(10,"python","Thoma",5,9);
+create table library(author varchar2(10), title varchar2(20));
+
+create table library_audit(author varchar2(10), title varchar2(20));
+
+insert into library values ('A', 'Book1');
+insert into library values ('B', 'Book2');
+insert into library values ('C', 'Book3');
+insert into library values ('D', 'Book4');
+insert into library values ('E', 'Book5');
+
 select * from library;
+
+create trigger check_changes
+before update or delete on library
+for each row
+begin
+insert into library_audit values (:old.author, :old.title);
+end;
+/
+
+update library set author='K' where title='Book4';
+delete from library where title='Book2';
+
+select * from library;
+select * from library_audit;
