@@ -33,7 +33,7 @@ FETCH check_new into new_r;
 EXIT WHEN check_old%found = false;
 
 IF new_r <> old_r then
-INSER INTO N_Roll VALUES(name, old_r);
+INSERT INTO N_Roll VALUES(name, old_r);
 END IF;
 END LOOP;
 close check_old;
