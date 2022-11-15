@@ -1,5 +1,5 @@
 # For 'GPIO.BOARD' mode, we give the actual pin position
-# For 'GPIO.BCM' mode, we give the actual GPIO pin number
+# For 'GPIO.BCM' mode, we give the actual GPIO number
 
 
 import RPi.GPIO as GPIO
