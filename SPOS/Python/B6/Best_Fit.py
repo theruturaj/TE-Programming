@@ -1,3 +1,6 @@
+block_size = (100,500,200,300,600)
+process_size = int(input("Enter process size: "))
+
 def best_fit(block_size, process_size):
     memory_required = 99999999
     blocks_needed = []
