@@ -140,24 +140,24 @@ for i in range(len(symbol)):
     print(" {}              {}".format(symbol[i], symbolValue[i]))
 
 print("\n Pass-1 machine code output without reference of the symbolic address : \n")
-print("Relative Address	Instruction	    OpCode")
+print("Relative Address                  Instruction    OpCode")
 for i in range(n):
     if "NEXT" in l[i]:
-        print("{}                                 {}	              {}, - ".format(
+        print("{}                                 {}              {}, - ".format(
             relativeAddress[i], l[i], machineCode[i]))
     else:
-        print("{}                                 {}	              {} ".format(
+        print("{}                                 {}              {} ".format(
             relativeAddress[i], l[i], machineCode[i]))
 
 print("\n Pass-2 output: Machine code output \n ")
-print("Relative Address	Instruction	    OpCode")
+print("Relative Address                  Instruction    OpCode")
 for i in range(n):
     if "NEXT" in l[i]:
         for j in range(len(symbol)):
             if "NEXT" in symbol[j]:
                 pos = j
-                print("{}                                 {}	              {} , {}".format(
+                print("{}                                 {}             {} , {}".format(
                     relativeAddress[i], l[i], machineCode[i], symbolValue[pos]))
     else:
-        print("{}                                 {}	              {} ".format(
+        print("{}                                 {}              {} ".format(
             relativeAddress[i], l[i], machineCode[i]))
