@@ -1,9 +1,9 @@
 import java.util.*;
-import java.util.scanner;
+import java.util.Scanner;
 
 public class b1{
   static{
-    system.loadlibrary("b1");
+    system.loadLibrary("b1");
   }
   
   private native void add(int a, int b);
