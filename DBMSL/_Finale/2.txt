@@ -81,6 +81,7 @@ and earn more than $10,000.
 SELECT Employee.employee_name, Employee.street, Employee.city FROM Employee
 WHERE Employee.employee_name IN (SELECT Works.employee_name FROM Works WHERE Works.company_name='TechM' AND Works.salary>10000);
 
+
 #Q6. Change name of table Manages to Management.
 ALTER TABLE Manages RENAME TO Management;
 
