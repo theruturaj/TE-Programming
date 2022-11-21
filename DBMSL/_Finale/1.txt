@@ -17,7 +17,6 @@ CREATE TABLE Borrower(cust_name VARCHAR(20) NOT NULL, loan_no VARCHAR(20) NOT NU
 
 
 # (Customer 1: Sam, Account no: 1, Loan no: L1)
-
 INSERT INTO Account VALUES('1','Akurdi',250);
 INSERT INTO Branch VALUES('Akurdi','Pune','Gold');
 INSERT INTO Customer VALUES('Sam','Lane-1','Pune');
@@ -25,8 +24,8 @@ INSERT INTO Depositor VALUES('Sam','1');
 INSERT INTO Loan VALUES('L1','Akurdi',500);
 INSERT INTO Borrower VALUES('Sam','L1');
 
-# (Customer 2: Ron, Account no: 2, Loan no: L2)
 
+# (Customer 2: Ron, Account no: 2, Loan no: L2)
 INSERT INTO Account VALUES('2','Akurdi',750);
 INSERT INTO Branch VALUES('Akurdi','Pune','Diamond');
 INSERT INTO Customer VALUES('Ron','Road-1','Pune');
@@ -34,8 +33,8 @@ INSERT INTO Depositor VALUES('Ron','2');
 INSERT INTO Loan VALUES('L2','Akurdi',1500);
 INSERT INTO Borrower VALUES('Ron','L2');
 
-# (Customer 3: Nilesh, Account no: 3, Loan no: L3)
 
+# (Customer 3: Nilesh, Account no: 3, Loan no: L3)
 INSERT INTO Account VALUES('3','Baner',1250);
 INSERT INTO Branch VALUES('Baner','Pune','Car');
 INSERT INTO Customer VALUES('Nilesh','Road-C2','Pune');
@@ -43,8 +42,8 @@ INSERT INTO Depositor VALUES('Nilesh','3');
 INSERT INTO Loan VALUES('L3','Baner',1750);
 INSERT INTO Borrower VALUES('Nilesh','L3');
 
-# (Customer 4: Rohan, Account no: 4, Loan no: L4)
 
+# (Customer 4: Rohan, Account no: 4, Loan no: L4)
 INSERT INTO Account VALUES('4','Baner',900);
 INSERT INTO Branch VALUES('Baner','Pune','Van');
 INSERT INTO Customer VALUES('Rohan','Street-P2','Mumbai');
@@ -52,8 +51,8 @@ INSERT INTO Depositor VALUES('Rohan','4');
 INSERT INTO Loan VALUES('L4','Baner',2000);
 INSERT INTO Borrower VALUES('Rohan','L4');
 
-# (Customer 5: Alan, Account no: 5, Loan no: L5)
 
+# (Customer 5: Alan, Account no: 5, Loan no: L5)
 INSERT INTO Account VALUES('5','Akurdi',19000);
 INSERT INTO Branch VALUES('Akurdi','Pune','Bike');
 INSERT INTO Customer VALUES('Alan','Street-P6','Pune');
