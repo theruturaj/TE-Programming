@@ -16,7 +16,7 @@ CREATE TABLE Borrower(cust_name VARCHAR(20) NOT NULL, loan_no VARCHAR(20) NOT NU
 --Borrower(cust_name,loan_no)               -> (var, var)
 
 
-# TEST-1 (Customer 1: Sam, Account no: 1, Loan no: L1)
+# (Customer 1: Sam, Account no: 1, Loan no: L1)
 
 INSERT INTO Account VALUES('1','Akurdi',250);
 INSERT INTO Branch VALUES('Akurdi','Pune','Gold');
