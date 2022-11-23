@@ -1,6 +1,6 @@
 use company
 
-db.Employee.insert({empid : 101,Name : {Fname : "niketan ", Lname: "swami"},
+db.Employee.insert({empid : 101,Name : {Fname : "Nick ", Lname: "R"},
 				company_name : "TCS",
 				Salary : 100000,
 				Designation : "Programmer",
@@ -25,6 +25,8 @@ db.Employee.insert({empid : 102,
                     Contact : "3643147683",
                     Address : [{Paddr : "sjjsf"},
                     {Laddr : "kssgcv"}]})
+		    
+  
 #Q1. Select all documents where the Designation field has the value "Programmer" 
 and the value of the salary field is greater than 30000.
 db.Employee.find({Designation : "Programmer" , Salary : {$gt : 30000}})
