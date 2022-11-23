@@ -14,7 +14,7 @@ db.Employee.insert({empid : 101,Name : {Fname : "niketan ", Lname: "swami"},
         
         
 db.Employee.insert({empid : 102,
-                    Name : {Fname : "supreet", Lname: "birajdar"},
+                    Name : {Fname : "Ron", Lname: "John"},
                     company_name : "Infosys",
                     Salary : 200000,
                     Designation : "Developer",
