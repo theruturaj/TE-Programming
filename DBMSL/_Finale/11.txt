@@ -73,3 +73,6 @@ db.employee.find({$ord:[{Age:{$lt:30}},{Salary:{$gt:40000}}]}).pretty()
 
 #Q4. Finds all documents with Company_name: "TCS" and modifies their salary field by 2000.
 db.employee.updateMany({Company:"TCS"},{$inc:{Salary:+2000}})
+
+
+#Q5. Find _id, Designation, Address and Name from all documents where Company_name is "Infosys".
