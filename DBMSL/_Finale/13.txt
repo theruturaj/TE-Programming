@@ -56,8 +56,16 @@ db.employee.insertOne({Empid:5,
 			Address:{Paddr:{City:"Pune",Pin_code:"411001"}, Laddr:{City:"Pune",Pin_code:"411001"}}})
 			
 
-#Q1. 
+#Q1. Select all documents where the Designation field has the value "Programmer" 
+and the value of the salary field is greater than 30000.
 db.employee.find({$and:[{Designation:"Programmer"},{Salary:{$gt:30000}}]}).pretty()
 
 
-#Q2.
+#Q2. Creates a new document if no document in the employee collection contains
+{Designation: "Tester", Company_name: "TCS", Age: 25}.
+
+
+
+#Q3. Selects all documents in the collection where the field age has a value less than 
+30 or the value of the salary field is greater than 40000.
+db.employee.find({$ord:[{Age:{$lt:30}},{Salary:{$gt:40000}}]}).pretty()
