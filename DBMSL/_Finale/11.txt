@@ -63,6 +63,9 @@ db.employee.find({$and:[{Designation:"Programmer"},{Salary:{$gt:30000}}]}).prett
 
 #Q2. Creates a new document if no document in the employee collection contains
 {Designation: "Tester", Company_name: "TCS", Age: 25}.
+db.employee.findAndModify({query:{Designation:"Tester",Company:"TCS",Age:25},
+			   update:{$set:{Designation:"Tester",Company:"TCS",Age:25}},
+			   upsert:true})
 
 
 
