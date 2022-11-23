@@ -58,7 +58,7 @@ db.employee.insertOne({Empid:5,
       
 
 #Q1. Return the Total Salary of per Company
-
+db.employee.mapReduce(function() {emit(this.Company,this.Salary)}, function(company,salary){return Array.sum(salary)},{out:'test'})
 
 
 #Q2. Return the Total Salary of Company Name:"TCS"
