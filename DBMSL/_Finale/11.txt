@@ -76,3 +76,4 @@ db.employee.updateMany({Company:"TCS"},{$inc:{Salary:+2000}})
 
 
 #Q5. Find _id, Designation, Address and Name from all documents where Company_name is "Infosys".
+db.employee.find({Company:"Infosys"},{Empid:0,Company:0,Salary:0,Age:0,Expertise:0,DOB:0,Emailid:0,Contact:0}).pretty()
