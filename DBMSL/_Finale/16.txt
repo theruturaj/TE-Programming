@@ -62,7 +62,7 @@ db.employee.mapReduce(function() {emit(this.Company,this.Salary)}, function(comp
 
 
 #Q2. Return the Total Salary of Company Name:"TCS"
-
+db.employee.aggregate([{$group:{_id:'$Company',T_Salary:{$sum:'$Salary'}}}])
 
 
 #Q3. Return the Avg Salary of Company whose address is “Pune".
